@@ -1,0 +1,26 @@
+.input-categorias {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart {
+  padding: 15px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(165, 165, 248);
+  border-radius: 5px;
+}
+
+.link-field {
+  margin-top: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
