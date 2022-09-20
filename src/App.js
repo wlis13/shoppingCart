@@ -1,28 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import CardProducts from './pages/CardProducts';
+import Form from './pages/Form';
+import Home from './pages/Home';
 
-
-class App extends React.Component {
-  state ={
-    numeroDeCliques: 0
-  }
-  handleClick = (numero) => {
-   this.setState((estadoAnterior, _props) => ({
-    numeroDeCliques: estadoAnterior.numeroDeCliques + numero
-   }))
-  }
-  handleClickLess = (numero) => {
-    this.setState((estadoAnterior, _props) => ({
-     numeroDeCliques: estadoAnterior.numeroDeCliques - numero
-    }))
-   }
+class App extends Component {
   render() {
-    const {numeroDeCliques} = this.state;
     return (
-      <div>
-        <button onClick={() => this.handleClick(1)}>clique</button>
-        <button onClick={() => this.handleClickLess(1)}>clique</button>
-        <p>{numeroDeCliques}</p>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <div>
+            <Route path="/card" component={ CardProducts } />
+            <Route exact path="/" component={ Home } />
+            <Route exact path="/form" component={ Form } />
+          </div>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
