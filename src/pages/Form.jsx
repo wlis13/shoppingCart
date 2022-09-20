@@ -22,7 +22,7 @@ class Form extends Component {
     }
 
     return (
-      <div>
+      <div className="title">
         <h1>Confira seus produtos</h1>
         <section>
           {getValues.map((itens, index) => (

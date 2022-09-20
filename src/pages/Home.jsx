@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { responseApiId } from '../api';
 import { BsCart } from 'react-icons/bs';
-import '../categoria.css';
+import '../styleProject.css';
 import RenderProducts from './RenderProducts';
 
 class Home extends Component {
@@ -32,7 +32,7 @@ class Home extends Component {
   render() {
     const { resultSearch, message } = this.state;
     return (
-      <div>
+      <div className="title">
         <nav className="link-field">
           <Link to="/card" className="cart">
             Carrinho

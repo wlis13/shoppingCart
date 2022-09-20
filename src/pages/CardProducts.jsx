@@ -15,7 +15,7 @@ class CardProducts extends Component {
   render() {
     const { results } = this.state;
     return (
-      <div>
+      <div className="title">
         <h3>Este é o seu carrinho</h3>
         {results.map((itens, index) => (
           <RenderCart
