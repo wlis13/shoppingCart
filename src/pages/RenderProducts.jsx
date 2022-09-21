@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../styleProject.css';
 
 class RenderProducts extends Component {
   handleCart = () => {
@@ -20,12 +21,12 @@ class RenderProducts extends Component {
   render() {
     const { title, price, image, quant } = this.props;
     return (
-      <div>
+      <div className="square-products">
         <h3>{title}</h3>
         <img src={image} alt={title} />
         <h3>{`R$${price}`}</h3>
         <p>{`quantidade disponível: ${quant}`}</p>
-        <button type="button" onClick={this.handleCart}>
+        <button className="button-cart" type="button" onClick={this.handleCart}>
           colocar no carrinho
         </button>
       </div>

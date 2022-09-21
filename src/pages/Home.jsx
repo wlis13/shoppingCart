@@ -32,30 +32,37 @@ class Home extends Component {
   render() {
     const { resultSearch, message } = this.state;
     return (
-      <div className="title">
-        <nav className="link-field">
-          <Link to="/card" className="cart">
-            Carrinho
-            <BsCart data-testid="icone" />
-          </Link>
-        </nav>
-        <form>
-          <h2>Encontre seu produto</h2>
+      <div>
+        <form className="header">
+          <h2 className="title-home">Shopping São José</h2>
           <label htmlFor="input-name">
             <input
+              className="input-search"
               type="text"
               id="input-name"
               name="nameInput"
               placeholder="digite o nome do produto"
               onChange={this.handleChange}
             />
+
+            <button
+              className="button-search"
+              type="button"
+              onClick={this.handleSearch}
+            >
+              Search
+            </button>
           </label>
-          <button type="button" onClick={this.handleSearch}>
-            Search
-          </button>
+          <nav className="link-field">
+            <Link to="/card" className="cart">
+              Carrinho
+              <BsCart data-testid="icone" />
+            </Link>
+          </nav>
         </form>
-        {message ? <h2>Carregando...</h2> : null}
-        <section>
+        {message ? <h2 className="msgCarregando">Carregando...</h2> : null}
+
+        <section className="products-search">
           {resultSearch.map((itens, index) => (
             <RenderProducts
               key={index}
