@@ -87,3 +87,49 @@
   font-size: 15pt;
   color: rgb(165, 165, 248);
 }
+
+@media screen and (max-width: 850px) {
+
+  .header {
+  height: 350px;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(207, 207, 240);
+  margin: 0px;
+  width: 390px;
+  }
+
+  .title-home {
+    position: absolute;
+    font-size: 35px;
+    top: 20px;
+    text-align: center;
+  }
+
+  .input-search {
+    font-size: 20pt;
+    width: 200px;
+    margin-right: 60px;
+
+  }
+
+  .button-search {
+    position: absolute;
+    right: 60px;
+    border: none;
+    width: 60px;
+    font-size: 15px;
+    height: 38px;
+
+  }
+
+  .link-field {
+    position: absolute;
+    top: 250px;
+
+  }
+}
